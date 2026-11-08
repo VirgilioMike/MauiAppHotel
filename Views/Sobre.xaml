@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="{StaticResource Secondary}">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                             Padding="20"
+                             Spacing="15">
+
+            <Image Source="hotel_logo.png"
+                   HeightRequest="130"
+                   Aspect="AspectFit" />
+
+            <Label Text="Hotel Recanto do Mar"
+                   FontFamily="KalamBold"
+                   FontSize="32"
+                   TextColor="{StaticResource Primary}" />
+
+            <Label Text="App para cálculo de diárias de hospedagem"
+                   FontSize="Subtitle"
+                   TextColor="{StaticResource Tertiary}" />
+
+            <Frame Padding="15"
+                   CornerRadius="16"
+                   BorderColor="{StaticResource Primary}"
+                   BackgroundColor="{StaticResource White}">
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+                      ColumnDefinitions="Auto, *"
+                      RowSpacing="12"
+                      ColumnSpacing="10">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Desenvolvedor:"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start" />
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="Virgílio Oliveira"
+                           TextColor="{StaticResource Primary}"
+                           HorizontalTextAlignment="Start" />
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Ano:"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start" />
+                    <Label Grid.Row="1" Grid.Column="1"
+                           Text="2026"
+                           TextColor="{StaticResource Primary}"
+                           HorizontalTextAlignment="Start" />
+
+                    <Label Grid.Row="2" Grid.Column="0"
+                           Text="Curso:"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start" />
+                    <Label Grid.Row="2" Grid.Column="1"
+                           Text="Técnico em Desenvolvimento de Sistemas - ETEC"
+                           TextColor="{StaticResource Primary}"
+                           HorizontalTextAlignment="Start" />
+
+                    <Label Grid.Row="3" Grid.Column="0"
+                           Text="Disciplina:"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start" />
+                    <Label Grid.Row="3" Grid.Column="1"
+                           Text="Desenvolvimento de Sistemas II - Agenda 13"
+                           TextColor="{StaticResource Primary}"
+                           HorizontalTextAlignment="Start" />
+
+                    <Label Grid.Row="4" Grid.Column="0"
+                           Text="Versão:"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start" />
+                    <Label Grid.Row="4" Grid.Column="1"
+                           x:Name="lbl_versao"
+                           TextColor="{StaticResource Primary}"
+                           HorizontalTextAlignment="Start" />
+                </Grid>
+            </Frame>
+
+            <Button Text="Voltar"
+                    CornerRadius="20"
+                    Clicked="btn_voltar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
